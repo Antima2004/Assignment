@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services Section</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom background color */
+    .custom-bg-purple {
+        background: linear-gradient(to right bottom, #2A1768 50%, #ECEEF6 50%); /* Color picked from the image */
+    }
+
+    .rotate-card {
+  transition: transform 0.3s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+
+  </style>
+</head>
+<body class="m-10 bg-gray-100  ">
+  <section class="pt-4 pb-12 pl-8 pr-8 custom-bg-purple" id="assignment">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold  text-white mb-12  uppercase font-mono">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- Card 1 -->
+        <div class="relative bg-white shadow-md rounded-sm text-center pt-16 pb-6 px-6 rotate-card">
+          <!-- Icon at the top -->
+          <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+            <div class="image bg-white text-white rounded-full p-4 border-4 border-[#271464] ">
+                <img class="rounded-full object-contain h-16 w-16" src="images/emergencyservice.svg" alt="">
+            </div>
+          </div>
+          <h3 class="text-lg font-semibold mb-2 mt-6">Emergency Plumbing Services</h3>
+          <p class="text-gray-600 mb-4">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+          <a href="#" class="text-purple-800 font-semibold hover:text-purple-800 uppercase font-mono text-base">Explore This Service > </a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative bg-white shadow-md rounded-sm text-center pt-16 pb-6 px-6 rotate-card">
+            <!-- Icon at the top -->
+            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+              <div class="image bg-white text-white rounded-full p-4 border-4 border-[#271464] ">
+                <img class="rounded-full object-contain h-16 w-16" src="images/plumbingdrain.svg" alt="">
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 mt-6">Plumbing and Drains</h3>
+            <p class="text-gray-600 mb-4">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+            <a href="#" class="text-purple-800 font-semibold hover:text-purple-800 uppercase font-mono text-base">Explore This Service > </a>
+          </div>
+  
+
+        <!-- Card 3 -->
+        <div class="relative bg-white shadow-md rounded-sm text-center pt-16 pb-6 px-6 rotate-card">
+            <!-- Icon at the top -->
+            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+              <div class="image bg-white text-white rounded-full p-4 border-4 border-[#271464] ">
+                <img class="rounded-full object-contain h-16 w-16" src="images/waterdamage.svg" alt="">
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 mt-6">Water Damage</h3>
+            <p class="text-gray-600 mb-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+            <a href="#" class="text-purple-800 font-semibold hover:text-purple-800 uppercase font-mono text-base">Explore This Service > </a>
+          </div>
+  
+
+        <!-- Card 4 -->
+        <div class="relative bg-white shadow-md rounded-sm text-center pt-16 pb-6 px-6 rotate-card">
+            <!-- Icon at the top -->
+            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+              <div class="bg-white text-white rounded-full p-4 border-4 border-[#271464] ">
+                <img class="rounded-full object-contain h-16 w-16" src="images/waterheaters.svg" alt="">
+              </div>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 mt-6">Water Heaters</h3>
+            <p class="text-gray-600 mb-4">Trust us for repair and replacement of gas, electric, and tankless water heaters.</p>
+            <a href="#" class="text-purple-800 font-semibold hover:text-purple-800 uppercase font-mono text-base">Explore This Service > </a>
+          </div>
+  
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Select all elements with the class 'rotate-card'
+      const cards = document.querySelectorAll('.rotate-card');
+
+      // Add event listeners for mouse hover
+      cards.forEach((card) => {
+        // Hover animation for rotation
+        card.addEventListener('mouseenter', () => {
+          anime({
+            targets: card,
+            rotateY: '360deg', // Rotate 360 degrees on Y-axis
+            duration: 800,     // Duration of animation in ms
+            easing: 'easeInOutQuad'
+          });
+        });
+
+        // Reset animation when mouse leaves
+        card.addEventListener('mouseleave', () => {
+          anime({
+            targets: card,
+            rotateY: '0deg',   // Reset rotation
+            duration: 800,
+            easing: 'easeInOutQuad'
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>
